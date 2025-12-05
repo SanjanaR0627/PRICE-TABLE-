@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Pricing Table</title>
+
+<style>
+    :root{
+        --primary: #4c6ef5;       /* Blue */
+        --popular: #ffb100;       /* Gold */
+        --green: #2ecc71;
+        --red: #e74c3c;
+        --bg: #f3f4f7;
+        --card-bg: #ffffff;
+        --shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    body{
+        margin:0;
+        padding:0;
+        background: var(--bg);
+        font-family: "Poppins", sans-serif;
+        color:#222;
+    }
+
+    h1{
+        text-align:center;
+        margin-top:40px;
+        font-size:34px;
+        font-weight:700;
+        letter-spacing:1px;
+    }
+
+    .container{
+        max-width:1100px;
+        margin:50px auto;
+        display:flex;
+        gap:25px;
+        justify-content:center;
+        flex-wrap:wrap;
+        padding:20px;
+    }
+
+    .card{
+        background: var(--card-bg);
+        padding:30px 25px;
+        width:300px;
+        border-radius:14px;
+        box-shadow: var(--shadow);
+        text-align:center;
+        transition:0.3s;
+    }
+
+    .card:hover{
+        transform: translateY(-8px);
+        box-shadow: 0 14px 25px rgba(0,0,0,0.15);
+    }
+
+    .title{
+        font-size:20px;
+        font-weight:600;
+        margin-bottom:10px;
+        color:#333;
+    }
+
+    .price{
+        font-size:42px;
+        font-weight:800;
+        margin:10px 0;
+        color: var(--primary);
+    }
+
+    .features{
+        list-style:none;
+        padding:0;
+        margin:20px 0;
+        text-align:left;
+    }
+
+    .features li{
+        margin-bottom:10px;
+        font-weight:500;
+        display:flex;
+        align-items:center;
+        gap:10px;
+    }
+
+    .check{
+        color: var(--green);
+        font-weight: bold;
+    }
+    .cross{
+        color: var(--red);
+        font-weight: bold;
+    }
+
+    .btn{
+        display:inline-block;
+        padding:10px 20px;
+        background: var(--primary);
+        color:white;
+        font-weight:600;
+        border-radius:8px;
+        text-decoration:none;
+        margin-top:10px;
+        transition:0.3s;
+    }
+
+    .btn:hover{
+        background:#3b5ad7;
+    }
+
+    .popular{
+        border:3px solid var(--popular);
+        position:relative;
+    }
+
+    .popular-tag{
+        position:absolute;
+        top:-12px;
+        right:-12px;
+        background: var(--popular);
+        color:#fff;
+        padding:5px 10px;
+        font-size:12px;
+        font-weight:700;
+        border-radius:6px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<h1>Choose Your Plan</h1>
+
+<div class="container">
+
+    <!-- Starter Plan -->
+    <div class="card">
+        <div class="title">Starter</div>
+        <div class="price">$5.99/mo</div>
+
+        <ul class="features">
+            <li><span class="check">✔</span> 5GB Storage</li>
+            <li><span class="check">✔</span> 1 User</li>
+            <li><span class="cross">✖</span> No Support</li>
+        </ul>
+
+        <a href="#" class="btn">Get Started</a>
+    </div>
+
+    <!-- Professional (Popular) -->
+    <div class="card popular">
+        <div class="popular-tag">POPULAR</div>
+        <div class="title">Professional</div>
+        <div class="price">$14.99/mo</div>
+
+        <ul class="features">
+            <li><span class="check">✔</span> 50GB Storage</li>
+            <li><span class="check">✔</span> 5 Users</li>
+            <li><span class="check">✔</span> Priority Support</li>
+        </ul>
+
+        <a href="#" class="btn">Choose Plan</a>
+    </div>
+
+    <!-- Enterprise -->
+    <div class="card">
+        <div class="title">Enterprise</div>
+        <div class="price">$39.99/mo</div>
+
+        <ul class="features">
+            <li><span class="check">✔</span> 200GB Storage</li>
+            <li><span class="check">✔</span> Unlimited Users</li>
+            <li><span class="check">✔</span> 24/7 Support</li>
+        </ul>
+
+        <a href="#" class="btn">Go Premium</a>
+    </div>
+
+</div>
+
+</body>
+</html>
